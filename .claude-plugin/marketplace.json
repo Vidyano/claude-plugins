@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "2sky",
+  "version": "1.0.0",
+  "description": "Public Claude Code plugins by 2sky",
+  "owner": {
+    "name": "2sky",
+    "email": "info@2sky.be"
+  },
+  "plugins": [
+    {
+      "name": "vidyano",
+      "description": "Vidyano framework usage patterns and recipes",
+      "source": "./plugins/vidyano",
+      "category": "development"
+    }
+  ]
+}

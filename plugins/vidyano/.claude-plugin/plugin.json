@@ -1,0 +1,12 @@
+{
+  "name": "vidyano",
+  "description": "Vidyano framework usage patterns and recipes (general, framework-level)",
+  "version": "0.8.1",
+  "author": {
+    "name": "Vidyano",
+    "email": "info@vidyano.com"
+  },
+  "homepage": "https://github.com/2sky/claude-plugins",
+  "repository": "https://github.com/2sky/claude-plugins",
+  "license": "MIT"
+}
