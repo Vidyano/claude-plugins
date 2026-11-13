@@ -1,12 +1,22 @@
 {
   "name": "vidyano",
   "description": "Vidyano framework usage patterns and recipes (general, framework-level)",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "author": {
     "name": "Vidyano",
     "email": "info@vidyano.com"
   },
   "homepage": "https://github.com/Vidyano/claude-plugins",
   "repository": "https://github.com/Vidyano/claude-plugins",
-  "license": "MIT"
+  "documentationUrl": "https://docs.vidyano.com/tools/claude-code-plugin",
+  "supportUrl": "https://github.com/Vidyano/claude-plugins/issues",
+  "license": "MIT",
+  "keywords": [
+    "vidyano",
+    "dotnet",
+    "csharp",
+    "ravendb",
+    "lit",
+    "web-components"
+  ]
 }
