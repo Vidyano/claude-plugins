@@ -1,11 +1,11 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "2sky",
+  "name": "vidyano",
   "version": "1.0.0",
-  "description": "Public Claude Code plugins by 2sky",
+  "description": "Public Claude Code plugins for Vidyano",
   "owner": {
-    "name": "2sky",
-    "email": "info@2sky.be"
+    "name": "vidyano",
+    "email": "info@vidyano.com"
   },
   "plugins": [
     {

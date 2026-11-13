@@ -1,14 +1,14 @@
-# 2sky Claude Code plugins
+# Vidyano Claude Code plugins
 
-Public [Claude Code](https://claude.com/claude-code) plugins by [2sky](https://www.2sky.be).
+Public [Claude Code](https://claude.com/claude-code) plugins for [Vidyano](https://www.vidyano.com) by [2sky](https://www.2sky.be).
 
 ## Install
 
 Add the marketplace, then install the plugin:
 
 ```
-/plugin marketplace add 2sky/claude-plugins
-/plugin install vidyano@2sky
+/plugin marketplace add Vidyano/claude-plugins
+/plugin install vidyano@vidyano
 ```
 
 Skills are then available as `/vidyano:<skill_name>` and also fire proactively when you work on the matching feature.
