@@ -245,7 +245,7 @@ Declare inline SVG as a light-DOM child of the app element:
 ```html
 <vi-app label="MyApp">
   <vi-icon name="ProgramUnit_Dashboard">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#888888" d="…"/></svg>
+    <svg viewBox="0 0 24 24"><path fill="#888888" d="…"/></svg>
   </vi-icon>
 </vi-app>
 ```

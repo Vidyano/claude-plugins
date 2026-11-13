@@ -184,7 +184,7 @@ using Vidyano.Service.ClientOperations;
 public override PersistentObject? Execute(CustomActionArgs e)
 {
     e.EnsureParent(Types.Order);
-    var url = $"https://portal.example.com/orders/{e.Parent.ObjectId}";
+    var url = Context.Session.Load<Order>(e.Parent.ObjectId).PortalUrl;   // the customer-facing link
 
     Manager.Current.QueueClientOperation(ExecuteMethodOperation.CopyToClipboard(url));
     return Notification(Messages.LinkCopied, NotificationType.OK);
