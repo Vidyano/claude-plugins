@@ -54,7 +54,7 @@ Everything else goes through one entry point. Because the operation rides on the
 public override PersistentObject? Execute(CustomActionArgs e)
 {
     e.EnsureParent(Types.Order);
-    var url = $"https://tracking.example.com/{e.Parent.ObjectId}";
+    var url = Context.Session.Load<Order>(e.Parent.ObjectId).TrackingUrl;   // the carrier's page for this order
 
     Manager.Current.QueueClientOperation(ExecuteMethodOperation.OpenUrl(url));
     return null;
@@ -72,7 +72,7 @@ var person    = Context.Session.Load<Person>(e.Parent.ObjectId);
 var reference = Guid.NewGuid().ToString("N")[..8].ToUpperInvariant();
 
 // External link — opens in a new browser context.
-Manager.Current.QueueClientOperation(ExecuteMethodOperation.OpenUrl($"https://maps.example.com/?q={person.Address}"));
+Manager.Current.QueueClientOperation(ExecuteMethodOperation.OpenUrl(person.Website));
 
 // In-app navigation — pushes a history entry; set `replace: true` to swap the current one instead.
 Manager.Current.QueueClientOperation(ExecuteMethodOperation.Navigate("orders"));
