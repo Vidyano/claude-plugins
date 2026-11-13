@@ -35,7 +35,7 @@ public override PersistentObject? Execute(CustomActionArgs e)
 }
 ```
 
-`NotificationType` is `Error`, `Notice`, `OK`, `Warning`, or `Critical`. **The default is `Error`** — `Notification("done")` with no type renders as a red error toast. Always pass `NotificationType.OK` for success.
+`NotificationType` is `Error`, `Notice`, `OK`, `Warning`, or `Critical`. **The default is `Error`** — `Notification("done")` with no type renders as a red error toast. Always use `NotificationType.OK` for success.
 
 To attach to a *real* object you're already returning:
 
@@ -74,7 +74,7 @@ var reference = Guid.NewGuid().ToString("N")[..8].ToUpperInvariant();
 // External link — opens in a new browser context.
 Manager.Current.QueueClientOperation(ExecuteMethodOperation.OpenUrl($"https://maps.example.com/?q={person.Address}"));
 
-// In-app navigation — pushes a history entry; pass `replace: true` to swap the current one instead.
+// In-app navigation — pushes a history entry; set `replace: true` to swap the current one instead.
 Manager.Current.QueueClientOperation(ExecuteMethodOperation.Navigate("orders"));
 
 // Clipboard — second arg is the confirmation toast (defaults to "Copied to clipboard!"). Needs a v4+ client.
@@ -170,7 +170,7 @@ Near-live screens with no websocket or client timer: the cadence and its **stop 
 ## Checklist
 
 - [ ] Operation vs notification picked correctly: a queued operation is attached regardless of return value; a notification only shows on the **returned** object.
-- [ ] Success notifications pass `NotificationType.OK` (default is `Error`); remember `AddNotification` escalates severity and concatenates.
+- [ ] Success notifications use `NotificationType.OK` (default is `Error`); remember `AddNotification` escalates severity and concatenates.
 - [ ] `ExecuteMethodOperation` built via the static factories, not the raw constructor; usually followed by `return null;`.
 - [ ] Refresh **surgically** with `RefreshOperation`; `ReloadPage()` only to recompute the visible action set.
 - [ ] Polling: delayed `RefreshOperation` queued from `OnLoad`/`QueryExecuted` ONLY while a non-terminal condition holds; interval in seconds; stop condition reachable.
