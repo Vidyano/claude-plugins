@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Public Claude Code plugins for Vidyano",
   "owner": {
-    "name": "vidyano",
+    "name": "Vidyano",
     "email": "info@vidyano.com"
   },
   "plugins": [
