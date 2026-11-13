@@ -68,8 +68,8 @@ Three concrete operation types. `ExecuteMethodOperation` is the workhorse — a 
 ```csharp
 // Inside Execute(CustomActionArgs e) on a Person action:
 e.EnsureParent(Types.Person);
-var person   = Context.Session.Load<Person>(e.Parent.ObjectId);
-var password = Guid.NewGuid().ToString("N")[..12];
+var person    = Context.Session.Load<Person>(e.Parent.ObjectId);
+var reference = Guid.NewGuid().ToString("N")[..8].ToUpperInvariant();
 
 // External link — opens in a new browser context.
 Manager.Current.QueueClientOperation(ExecuteMethodOperation.OpenUrl($"https://maps.example.com/?q={person.Address}"));
@@ -84,8 +84,8 @@ Manager.Current.QueueClientOperation(
 // Modal dialog — rich:true renders HTML; an optional delay (ms) defers the popup.
 Manager.Current.QueueClientOperation(
     ExecuteMethodOperation.ShowMessageBox(
-        title:   "Temporary password",
-        message: $"The password is <b>{password}</b>. It must be changed on first login.",
+        title:   "Booking confirmed",
+        message: $"Your booking reference is <b>{reference}</b>. Quote it when you contact support.",
         rich:    true));
 ```
 
